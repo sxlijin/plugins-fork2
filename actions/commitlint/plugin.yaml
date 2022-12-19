@@ -3,7 +3,7 @@ actions:
   definitions:
     - id: commitlint
       runtime: node
-      packages_file: package.json
+      packages_file: ${cwd}/package.json
       run: commitlint --edit ${1}
       triggers:
         - git_hooks: [commit-msg]
